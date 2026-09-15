@@ -1,68 +1,118 @@
-> 🧠 La logique : ce que l'Oracle calcule, et avec quels poids.
+> 🧠
 
-# Récapitulatif de la logique
+
+
+
+
+# detection vocabulaire
+Attention envie =/= pas envie
+
+# interprétation 
+
+#### q1
+#### q2
+#### q2
+#### q0:
+'non' catégorique = pile ou face
+
+
 
 ## Les quatre questions
 
-| | Question | Ce qu'on en lit | Nature |
-|---|---|---|---|
-| **Q1** | Première sensation ? | **peur** · **élan** · **désintérêt**, trois compteurs séparés | élan et désintérêt s'additionnent ; la peur déclenche des règles |
-| **Q2** | Si ça se passe bien ? | **récompense**, par niveaux, et la **valeur** qu'elle sert | points + étiquette |
-| **Q3** | Si demain tu l'as pas fait ? | **soulagement // regret** par niveaux, **ir/réversibilité**, **répétition** | trois lectures sur la même phrase |
-| **Q0** | Dans 10 jours, ça compte ? | **la portée** — oui / peut-être / non | des règles, pas des points |
+**Q1 — trois compteurs séparés**, deux niveaux chacun (petit 2 / fort 4) :
 
-## Les trois monnaies
+```
+ÉLAN      ce qui tire vers l'avant
+PEUR      l'alarme du corps
+INERTIE   ce qui repousse, sans peur
 
-| | Unité | Entre dans le score ? |
-|---|---|---|
-| **Coût** | PV dépensés | oui, s'il dépasse l'énergie disponible |
-| **Récupération** | PV rendus | non — comptée à part depuis la 2.5.1 |
-| **Trésor** | ni PV ni points | départage seulement |
+envie = ÉLAN − INERTIE   → entre dans l'addition
+peur                     → n'entre PAS dans l'addition, sert aux règles
+```
 
-## Les verdicts
+Justifié par tes données : **15 % de tes réponses mêlent élan et peur.** Un seul axe les annulerait.
 
-| Verdict | Quand |
-|---|---|
-| **Une voie** | un écart net entre les scores |
-| **La pièce** | ça ne comptera pas : pile ou face assumé |
-| **Les cartes** | ça compte, mais rien ne départage |
-| **Aucune des deux** | toutes les voies sous zéro |
+**Q2** — une seule échelle, positive, minimum 0. Pas de cohabitation observée, un compteur suffit.
+
+**Q3** —
+INTENSITÉ      soulagement · osef · un peu frustrée · regret net
+IRRÉVERSIBILITÉ   je peux toujours  ←→  occasion ratée
+REPETITION
+
+**Q0 (la portée)** — **ne donne aucun point**. C'est arithmétique : elle est globale, donc des points fixes s'annulent entre les options. Elle agit en **règles** (plutôt qu'en poids, à mon avis révisé).
+
+## Les facteurs
+
+- **Énergie** : coût net = coût − gain. Si déficit **et** pas de vert fort → pénalité. Si vert fort → on note le dépassement mais **on ne pénalise pas** (la règle du lac). C'est ta V2.5, je n'ai rien de mieux.
+- **Coût comparé** → départage
+- **Gain** → **départage uniquement**, jamais prioritaire sur tes mots
+
+## Bonus / malus — ±1 plat, jamais ajustés individuellement
+
+- **valeurs** (ta liste validée en amont) : +1 par mot, plafonné, et **taggées pour le journal**
+- **hameçons** : −1
+- **engagement** : détecté aux **verbes relationnels** (« j'ai dit », « m'attend », « compte sur moi ») → +1
+- **culpabilité** : détectée aux **impersonnels** (« il faut que », « normal de », « tout le monde ») → −1
+- **Les deux peuvent se déclencher ensemble** — net zéro, et la phrase pose la question. Le cas ambigu devient une information, pas un bug.
+
+## Verdict
+
+- égalité → **pas plus de granularité** (ça ne réglerait rien : parfois tes deux réponses sont identiques), mais **départage par le gain**
+- **pièce** = « ça ne comptera pas, arrête de calculer »
+- **cartes** = « ça compte, et je n'ai pas assez d'éléments » — plus solennel
+
+## Deux principes
+
+> **Une règle se teste. Un poids se défend.**  
+> Donc : beaucoup de règles, peu de poids.
+
+> **Suite de régression rejouée à chaque changement.**  
+> C'est ce qui aurait attrapé les trois régressions de la V2.5.
 
 ---
 
+**deux règles qui contredisent Q0** :
+
+|||
+|---|---|
+|**répétition**|« ça ne comptera pas » est faux pour les choses qui reviennent|
+|**peur + regret**|la peur ne disqualifie pas quand ça compte|
+
+
 # Combien faire peser quoi
 
-## Ce que dit la recherche
+Recherche faite le 15/09, à confronter à l'échelle ci-dessus.
+
+## Quatre résultats
 
 **1. Des poids grossiers battent des poids ajustés.**
 Dawes montre que des modèles linéaires à poids égaux, ou même arbitraires,
 battent régulièrement le jugement expert *et* les modèles finement optimisés.
 Ce qui compte, c'est de savoir **quelles variables regarder et dans quel
-sens** — pas de trouver le bon coefficient. Les poids finement ajustés le sont
-au passé, et le futur n'est pas le passé.
+sens**, pas de trouver le bon coefficient — parce qu'un coefficient fin est
+ajusté au passé, et que le futur n'est pas le passé.
 
-→ **Des entiers simples. Jamais un poids réglé sur les 27 dilemmes passés.**
+→ Ton « ±1 plat, jamais ajusté individuellement » est exactement ça.
+Et ton « un poids se défend » aussi.
 
-**2. Le regret doit peser plus lourd que l'envie.** Trois sources convergent :
+**2. Le regret doit peser environ deux fois l'élan.** Trois sources
+convergent :
 
-- L'aversion à la perte : λ ≈ 2,25 chez Tversky & Kahneman (1992) — une perte
-  pèse deux fois une équivalent gain. Le chiffre est discuté, des
-  méta-analyses trouvent parfois bien moins, mais le sens ne bouge pas.
+- L'aversion à la perte : λ ≈ 2,25 chez Tversky & Kahneman (1992). Le chiffre
+  est discuté — des méta-analyses trouvent parfois bien moins — mais le sens
+  ne bouge pas.
 - *Bad is stronger than good* (Baumeister et al., 2001) : le négatif l'emporte
-  dans presque tous les domaines mesurés, avec un rapport de 2 à 5 selon le
-  contexte.
+  dans presque tous les domaines mesurés, rapport de 2 à 5.
 - Surtout : le **regret anticipé** prédit le comportement **mieux que les
   autres émotions négatives** (Brewer et al., 2016 — méta-analyse, 81 études,
   45 618 personnes ; r = .50 avec l'intention, .29 avec le comportement). Et
-  le **regret d'inaction** — littéralement la Q3 — a une association plus
-  forte qu'on ne le croyait.
+  le **regret d'inaction**, littéralement ta Q3, a une association plus forte
+  qu'on ne le croyait.
 
-→ **Regret fort ≈ 2 × élan fort.**
-
-> ⚠️ Le moteur actuel fait l'inverse : élan fort = **+5**, regret fort =
-> **+4**. Les sauvegardes disaient déjà le contraire (« mieux vaut essayer
-> quelque chose qui me donne bof envie que de regretter de pas l'avoir
-> fait »).
+→ Si Q1 fort vaut **4**, Q3 regret net devrait valoir **8**, pas 4.
+C'est le seul endroit où la recherche demande de casser la symétrie des
+échelles. Ta propre leçon disait déjà la même chose : *« mieux vaut essayer
+quelque chose qui me donne bof envie que de regretter de pas l'avoir fait »*.
 
 **3. La peur ne doit pas être un simple malus.**
 L'évitement expérientiel — fuir ce qu'on redoute — est associé à l'anxiété et
@@ -71,86 +121,33 @@ de 441 études, 135 347 participants). Retirer des points dès qu'une peur
 apparaît, c'est pousser mécaniquement vers l'évitement, exactement le schéma
 que l'ACT identifie comme coûteux.
 
-→ **La peur ne s'additionne pas. Elle déclenche des règles.** C'est déjà la
-décision prise, et elle est fondée.
+→ Ta décision — la peur n'entre pas dans l'addition, elle sert aux règles —
+est fondée, pas seulement intuitive.
 
-**4. Trois à cinq niveaux par échelle, pas plus.**
-En dessous de 5 points on perd de l'information, au-dessus de 7 le gain
-devient marginal (Preston & Colman). Pour une échelle remplie en texte libre,
-3 ou 4 niveaux par axe suffisent largement.
+**4. Deux niveaux par compteur, c'est peu mais défendable.**
+En dessous de 5 points d'échelle on perd de l'information, au-dessus de 7 le
+gain devient marginal (Preston & Colman). Ton petit 2 / fort 4 donne, une
+fois `élan − inertie` calculé, une échelle à 5 positions (−4 −2 0 +2 +4).
+C'est le plancher de la zone utile, pas en dessous.
 
-## Poids proposés
+## Sources
 
-Grossiers, entiers, dans l'esprit de Dawes. À discuter, pas à appliquer.
-
-| Signal | Lu en | Poids | Pourquoi |
-|---|---|---|---|
-| Regret fort | Q3 | **+6** | le meilleur prédicteur de la littérature *et* du corpus |
-| Regret modéré | Q3 | **+2** | |
-| Regret nul | Q3 | **−2** | l'indifférence est une réponse |
-| Soulagement fort | Q3 | **−5** | ne pas le faire soulagerait : signal, pas fatigue |
-| Élan fort | Q1 | **+3** | moitié du regret fort, conforme à λ ≈ 2 |
-| Élan modéré | Q1 | **+1** | |
-| Désintérêt | Q1 | **−1** à **−2** | selon l'état de la flemme |
-| Refus net | Q1 | **−3** | |
-| Récompense pleine | Q2 | **+3** | |
-| Récompense creuse | Q2 | **−1** | |
-| Valeur servie | Q2 | **+1** à plat | elle qualifie, elle ne pèse pas plus |
-| Hameçon | Q1 / Q3 | **−2** chacun | |
-| Peur | Q1 | **0** | règles seulement |
-
-## Et Q0 ?
-
-Q0 est **globale** : une seule réponse pour toute la quête. Un multiplicateur
-appliqué à toutes les voies ne change donc pas leur ordre.
-
-```
-A = 6, B = 2   →  ×2  →  A = 12, B = 4     A gagne toujours
-```
-
-Mais il change les **écarts**, donc la catégorie du verdict :
-
-```
-A = 6, B = 2   écart 4  →  « c'est serré »
-        ×2     écart 8  →  « c'est net »
-```
-
-→ Un multiplicateur Q0 ne peut pas désigner une autre voie, mais il peut
-changer la confiance de l'Oracle, et faire basculer « aucune des deux ». La
-relativisation (÷2 sur « au pire c'est pas grave ») fait déjà exactement ça.
-
-| réponse | portée | effet proposé |
-|---|---|---|
-| Oui | `high` | ×1,5 sur les écarts — l'Oracle tranche plus volontiers |
-| Peut-être | `medium` | ×1 |
-| Non | `low` | verrou : pile ou face, sans analyse de rang |
+- Dawes, *The robust beauty of improper linear models in decision making* (1979)
+- Tversky & Kahneman, *Advances in prospect theory* (1992) — λ ≈ 2,25
+- Baumeister, Bratslavsky, Finkenauer & Vohs, *Bad is stronger than good* (2001)
+- Brewer, DeFrank & Gilkey, *Anticipated regret and health behavior* (2016)
+- Preston & Colman, sur le nombre de points d'échelle (2000)
+- Méta-analyse sur l'évitement expérientiel (441 études, 2022)
 
 ## La seule validation honnête
 
-Ces poids ne peuvent pas être prouvés sur les 27 dilemmes passés : les y
-ajuster, c'est précisément ce que Dawes déconseille, et l'expérience de
-surapprentissage l'a montré — une avance de 23 points s'est évaporée sur
-8 dilemmes inédits. **Un poids se défend, il ne se règle pas.** La mesure
-viendra des dilemmes à venir, pas de ceux qui ont servi à le construire.
+Ces poids ne peuvent pas être prouvés sur les dilemmes déjà enregistrés : les
+y ajuster est précisément ce que Dawes déconseille, et l'expérience 3 du labo
+l'a montré — une avance de 23 points s'est évaporée sur 8 dilemmes inédits.
+La mesure viendra des dilemmes à venir, pas de ceux qui ont servi à
+construire le barème.
 
 ---
-
-# Décisions encore ouvertes
-
-- **Amitié** : valeur à part entière, ou nuance de la connexion ?
-- **Q0** : multiplicateur sur les écarts, ou règles seules ?
-- **Répétition** : contredit-elle « ça ne comptera pas » ? (décidé oui, à câbler)
-- **Irréversibilité** : un cran de Q3, pas un pondérateur (décidé, à câbler)
-
----
-
-# Interprétation
-
-#### q1
-#### q2
-#### q3
-#### q0
-'non' catégorique = pile ou face
 
 # recommendation
 Voie A,B,C,D
@@ -160,10 +157,11 @@ Pile ou face Y
 clear / weak / energy (mais en vrai j'utilise peu cette fonctionnalité)%%
 Créer un code par recommendation, pour permettre à l'App d'extraire ensuite une phrase random dans un second fichier oracle_words
 
-# feedback
+# dénouement
 #### Followed Oracle
 null pour pile ou face
-true si recommandation ni l'un ni l'autre = decision aucun des deux / autre
+true si recommandation ni l'un ni l'autre = decision rien  / autre
+
 #### OracleWasRight:
 true si
 - recommandation = choix & satisfaction Oui (3/3)

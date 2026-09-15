@@ -18,6 +18,20 @@ Rien n'est inventé ici : chaque mot vient d'une source, notée en fin de bloc.
 
 ---
 
+# Idées de phrases, notées en passant
+
+Écrites de ta main dans la version précédente de ce document, gardées ici en
+attendant qu'elles rejoignent `oracle_phrases.md` :
+
+- **fatigue ≠ flemme** — « ton corps est à plat mais ton cœur veut y être »
+- **les hameçons** — « "Il faut" n'est pas une envie, c'est un fantôme qui
+  parle à ta place »
+- **l'option « raisonnable » qui écrase** — « ce choix te résigne »
+
+Et une note de barème restée seule : **3 au pire**.
+
+---
+
 # La grille
 
 ```
