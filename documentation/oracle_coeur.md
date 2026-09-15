@@ -377,6 +377,128 @@ désormais son niveau `medium` à lui. Avant, `peut-être`, `pas sûre` et
 
 ---
 
+# Tous les scénarios possibles
+
+Relevé exhaustif des quatre sources, **sans arbitrage**. Chaque ligne dit ce
+qui la déclenche et d'où elle vient. Les doublons et les contradictions sont
+laissés visibles : c'est le matériau à trancher.
+
+| marque | source |
+|---|---|
+| `2.5.1` | `quest-finder/src/oracle.js`, le moteur vivant |
+| `V2` | `oracle_versions/oracle_v2.md`, janvier 2026 |
+| `V3a` | `oracle_versions/oracle_V3-avorton.md` |
+| `phr` | `oracle_phrases.md`, les 11 CAS |
+
+---
+
+## P — une voie est désignée
+
+### Verdict net (écart de score ≥ 5, et au moins une voie positive)
+
+| # | Déclencheur | Sources |
+|---|---|---|
+| P1 | tag `creativite` | `2.5.1` |
+| P2 | tag `connexion` | `2.5.1` |
+| P3 | tag `valeur_q0` **et** aucun signal corporel vert | `2.5.1` |
+| P4 | tag `pression_sociale` **ou** `obligation` | `2.5.1` `phr`CAS5 |
+| P5 | tag `regret_fort` | `2.5.1` `phr`CAS7 |
+| P6 | tag `alerte_corporelle` | `2.5.1` `phr`CAS6 |
+| P7 | un signal vert fort, sans tag particulier | `2.5.1` `V2` `phr`CAS1 |
+| P8 | défaut : rien de ce qui précède | `2.5.1` `V2` |
+
+> `V2` n'a que deux branches ici — avec ou sans signal vert. Les six premières
+> catégories sont une invention de `2.5.1`.
+
+### Voie désignée sans écart net (dilemme tranché quand même)
+
+| # | Déclencheur | Sources |
+|---|---|---|
+| P9 | tags `excitation` **ou** `regret_fort` | `2.5.1` |
+| P10 | portée **haute** **et** flemme des deux côtés | `2.5.1` |
+| P11 | la moins chère n'est pas celle qui rapporte le plus | `2.5.1` `V2` `phr`CAS3 |
+| P12 | même voie moins chère **et** plus rapportante, écart réel | `2.5.1` |
+| P13 | ni le coût ni le gain ne départagent, mais les valeurs ne sont pas nulles | `2.5.1` |
+| P14 | corps à plat **et** cœur qui veut y aller (conflit d'énergie) | `2.5.1` `V2` `phr`CAS2 |
+
+> `V2` tranche ici sur **la moins chère**, systématiquement. `2.5.1` tranche
+> sur **le score**. C'est la divergence mesurée à l'expérience 5 du labo.
+
+---
+
+## X — aucune des deux
+
+| # | Déclencheur | Sources |
+|---|---|---|
+| X1 | toutes les voies sous zéro **et** flemme partout | `2.5.1` `V2` `phr`CAS4 |
+| X2 | toutes sous zéro **et** hameçons (`obligation`, `pression_sociale`, `culpabilite`) | `2.5.1` |
+| X3 | toutes sous zéro, sans motif identifié | `2.5.1` `V2` |
+
+> `phr` prévoit « CAS en fonction des arguments » sans les lister.
+
+---
+
+## Y — pile ou face
+
+| # | Déclencheur | Sources |
+|---|---|---|
+| Y1 | portée **faible** (« ça ne comptera pas ») **et** une voie rapporte un peu plus | `2.5.1` |
+| Y2 | portée **faible**, sans écart de gain | `2.5.1` |
+| Y3 | rien ne départage, et rien ne coûte ni ne rapporte (littéralement 0/0) | `2.5.1` |
+| Y4 | la moins chère n'est pas celle qui rapporte le plus | `V2` `phr`CAS3 |
+| Y5 | tirage de cartes — « ça compte, et je n'ai pas assez d'éléments » | `phr` |
+
+> **Y4 et P11 sont le même déclencheur.** `V2` en fait un pile ou face,
+> `2.5.1` en fait une voie désignée. À trancher.
+>
+> **Y5 n'existe dans aucun moteur.** Les cartes sont une idée de `phr`, jamais
+> codée. C'est la distinction pièce / cartes décidée le 14/09.
+
+---
+
+## Les cas de `phr` qui ne sont pas des verdicts
+
+| CAS | Ce que c'est en réalité |
+|---|---|
+| CAS 8 — décision importante | un **ton**, pas une catégorie : « le poids de ce choix est réel, et malgré tout… » se greffe sur n'importe quel verdict |
+| CAS 9 — l'option « raisonnable » écrase | un **hameçon** non détecté par les moteurs. Aucune règle ne le repère aujourd'hui |
+| CAS 10 — doute post-choix | un **dénouement**, pas un verdict. Mal rangé |
+| CAS 11 — peur de la bonne décision | un **sous-cas de P7** : peur + élan, déjà `peur_excitation` dans `2.5.1` |
+
+---
+
+## Dénouements
+
+Trois notations coexistent pour les mêmes cases.
+
+| satisfaction | a suivi | `phr` | roadmap | `2.5.1` |
+|---|---|---|---|---|
+| bon | oui | `Gy` | `GT` | `good_followed` |
+| bon | non | `Gn` | — | `good_own` |
+| bof | oui | `My` | `M` | `meh` |
+| bof | non | `Mn` | `M` | `meh` |
+| mauvais | oui | `By` | `BT` | `bad_followed` |
+| mauvais | non | `Bn` | `BF` | `bad_own` |
+
+> **Le bof est dédoublé dans `phr` et fusionné ailleurs.** `phr` écrit deux
+> jeux de phrases distincts pour `My` et `Mn` ; le moteur n'en connaît qu'un.
+> Six cases ou cinq — à trancher.
+>
+> Et le pile ou face n'a **aucun dénouement** : `followedOracle` vaut `null`,
+> aucune des six cases ne s'applique.
+
+---
+
+## Ce qu'aucune source ne couvre
+
+- la **répétition** (« ça revient tout le temps ») — décidée comme règle, jamais codée
+- l'**irréversibilité** (« je peux toujours le faire ») — idem
+- l'**engagement** aux verbes relationnels, opposé à la culpabilité aux impersonnels
+- le cas où **deux voies sur trois** se valent et la troisième décroche
+- le **dénouement d'un pile ou face**
+
+---
+
 # Ailleurs
 
 - La **liste brute de vocabulaire** (861 entrées) est restée dans
