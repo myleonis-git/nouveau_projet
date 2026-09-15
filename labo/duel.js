@@ -1,8 +1,8 @@
 /**
  * DUEL — l'oracle v2.5 (celui de l'autrice) contre le moteur de ce dépôt,
- * jugés sur les 25 dilemmes réels de docs/sauvegardes.md, avec SON critère.
+ * jugés sur les 25 dilemmes réels de documentation/sauvegardes.md, avec SON critère.
  *
- * Critère `OracleWasRight`, tel que défini dans docs/oracle_cerveau.md :
+ * Critère `OracleWasRight`, tel que défini dans documentation/oracle_cerveau.md :
  *   vrai si  recommandation == choix  ET  satisfaction = good
  *   vrai si  recommandation != choix  ET  satisfaction = bad ou meh
  *
@@ -19,7 +19,7 @@ import { LECTEURS } from './lecture.js';
 import { consulter } from '../js/oracle.js';
 
 /* --- Lecture du tableau --- */
-const lignes = readFileSync('docs/sauvegardes.md', 'utf-8')
+const lignes = readFileSync('documentation/sauvegardes.md', 'utf-8')
   .split('\n').filter((l) => l.trim().startsWith('|'));
 const E = lignes[0].replace(/^\||\|$/g, '').split('|').map((c) => c.trim());
 const I = Object.fromEntries(E.map((n, i) => [n, i]));

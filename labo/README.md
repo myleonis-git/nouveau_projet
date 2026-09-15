@@ -107,8 +107,8 @@ mises en garde, pas pour sauver le verdict.**
 ## Expérience 3 — duel des deux oracles
 
 `duel.js` — l'oracle v2.5 (celui des prototypes précédents) contre le
-moteur de ce dépôt, sur les **25 dilemmes réels de `docs/sauvegardes.md`**,
-jugés avec le critère défini par l'autrice dans `docs/oracle_cerveau.md` :
+moteur de ce dépôt, sur les **25 dilemmes réels de `documentation/sauvegardes.md`**,
+jugés avec le critère défini par l'autrice dans `documentation/oracle_cerveau.md` :
 
 > `OracleWasRight` = vrai si la recommandation a été suivie et la
 > satisfaction est bonne, OU si elle n'a pas été suivie et la satisfaction
@@ -164,8 +164,8 @@ résultat, c'est une absence de mesure.
 ## Expérience 4 — V2 contre V2.5
 
 `v2_vs_v25.js` — reconstruction des deux moteurs depuis
-`docs/oracle_version/`, exécutés sur les 25 dilemmes de
-`docs/sauvegardes.md`, jugés au critère `OracleWasRight`.
+`documentation/oracle_version/`, exécutés sur les 25 dilemmes de
+`documentation/sauvegardes.md`, jugés au critère `OracleWasRight`.
 
 ```
 node labo/v2_vs_v25.js
@@ -228,3 +228,81 @@ ni les deux bugs serait vraisemblablement meilleure que les deux.
 diffère (listes de mots-clés, fonctions auxiliaires), les scores changent.
 ⚠️ 17 et 18 dilemmes jugeables : un seul cas pèse 6 points. L'écart de 14
 points représente 2 à 3 cas. Indicatif, pas concluant.
+
+### Suite
+
+L'expérience 5 reprend cet écart de 14 points et montre qu'**aucun des trois
+défauts ci-dessus ne l'explique**. Les trois sont par ailleurs corrigés
+depuis, dans l'oracle 2.5.1.
+
+---
+
+## Expérience 5 — les bugs, ou la logique ?
+
+`isolation.js` — l'expérience 4 mesure l'écart sans dire d'où il vient. Ici
+chaque variante ne change **qu'une seule chose** : le verrou Q0, le code mort
+`importance === 'low'`, l'arbitrage coût/gain de V2, la règle `fortN1`.
+
+```
+node labo/isolation.js
+```
+
+### Résultat
+
+| # | variante | justes |
+|---|---|---|
+| 1 | V2 (janvier) | **12/18 — 67 %** |
+| 2 | V2.5 telle que pensée (verrou vivant) | 9/17 — 53 % |
+| 3 | V2.5 telle que déployée (Q0 jamais transmise) | 12/22 — 55 % |
+| 4 | + code mort réparé | 11/21 — 52 % |
+| 5 | + l'arbitrage coût/gain de V2 | 11/20 — 55 % |
+| 6 | + le `fortN1` de V2 | 12/22 — 55 % |
+| 7 | V2.5 + **toute** la structure de V2 | 11/20 — 55 % |
+
+On débranche les bugs un par un, on rebranche toute la structure de V2 : le
+score ne bouge pas. **Ce n'est donc ni les bugs, ni l'architecture.**
+
+Et à périmètre égal — les 18 dilemmes où les deux tranchent — V2 fait 12/18
+et V2.5 10/18. **Deux dilemmes d'écart.** Sur 18 cas, ce n'est pas une
+différence.
+
+### Le résultat qui compte
+
+D'où viennent les bonnes réponses de V2 ?
+
+```
+verdict tranché par le SCORE (diff>=5)     : 3/6   ← 50 %, le hasard
+verdict tranché par l'ARBITRAGE coût/gain  : 5/6   ← 83 %
+verdict « ni l'un ni l'autre » (allWeak)   : 4/6   ← 67 %
+```
+
+**V2 n'est pas bon parce qu'il lit bien. Il est bon parce qu'il lit mal.**
+Son lexique est si maigre que les deux voies finissent constamment à égalité
+(`A 0  B 0`), et à chaque égalité il abandonne le texte pour se rabattre sur
+le budget d'énergie — la seule donnée qui soit *mesurée* et non *inférée*.
+
+V2.5 a un lexique trois fois plus riche. L'amplitude des scores double
+(écart-type 4,88 contre 2,87), et le seuil `diff >= 5` n'a pas bougé :
+
+```
+diff>=5 se déclenche :  V2   8/25 fois  (32 %)
+                        V2.5 18/25 fois (72 %)
+```
+
+Le lexique a été enrichi sans recalibrer le seuil. V2.5 se croit donc sûre
+d'elle sur 72 % des dilemmes au lieu de 32 %, et cesse de se rabattre sur
+l'énergie. **Elle a troqué sa partie à 83 % contre sa partie à 50 %.**
+
+### Ce qu'il faut en retenir pour la suite
+
+1. **Les seuils absolus sont couplés au lexique.** Ajouter un mot déplace
+   silencieusement la frontière entre « verdict net » et « c'est serré ».
+   Normaliser le score, ou re-vérifier le seuil à chaque ajout de mots.
+2. **La séparation coût / récupération / trésor est validée par les
+   chiffres** : c'est la partie la plus fiable du moteur.
+3. **Le pile ou face n'est pas un aveu d'échec.** V2 le dit 6 fois sur 25 et
+   c'est une des raisons de son score.
+
+⚠️ 18 à 22 dilemmes jugeables, un cas pèse 5 points. Le résultat solide n'est
+pas l'écart de score — c'est le `3/6` contre `5/6`, qui dit où se trouve la
+valeur du moteur.
