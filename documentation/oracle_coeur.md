@@ -377,6 +377,121 @@ désormais son niveau `medium` à lui. Avant, `peut-être`, `pas sûre` et
 
 ---
 
+# Les cinq moteurs, ce qu'ils produisent
+
+Relevé de ce que chaque moteur **renvoie** — pas de ce qu'il dit. C'est la
+matière dont sortiront les catégories.
+
+| moteur | où | ce qu'il renvoie |
+|---|---|---|
+| **V2** | `oracle_versions/oracle_v2.md` | `caseType` ∈ clear · dilemma · allWeak, et du texte déjà assemblé |
+| **V2.5** | `oracle_versions/oracle_v2.5.md` | fichier quasi vide, reconstruit depuis V2.5.1 |
+| **V2.5.1** | `quest-finder/src/oracle.js` | `caseType` ∈ clear · dilemma · pileouface · none, **23 tags**, et du texte assemblé |
+| **V3a** | `oracle_versions/oracle_V3-avorton.md` | jamais codé. **44 familles** de signaux, avec type, niveau et score |
+| **QCM** | `js/oracle.js` + `js/phrases.js` | `type` ∈ TETE · SERRE · PILE_OU_FACE, **5 drapeaux**, une `dominante`, **aucun texte** |
+
+## Le QCM est le seul à séparer le calcul de la parole
+
+En tête de `js/oracle.js` :
+
+> *« AUCUN texte destiné à l'écran ici. Le moteur ne produit que des nombres et
+> des codes. Toute la parole vit dans phrases.js. On peut donc réécrire
+> entièrement le ton de l'oracle sans risquer de casser un calcul, et tester le
+> calcul sans lire un mot. »*
+
+C'est l'architecture que la V4 cherche. Les quatre autres assemblent la phrase
+à l'intérieur du calcul, ce qui rend l'un intestable sans l'autre.
+
+### Ce que le QCM renvoie exactement
+
+```
+enjeu       leger · moyen · lourd            ← de Q0, ne marque aucun point
+type        TETE · SERRE · PILE_OU_FACE
+dominante   sensation · gain · regret        ← quel axe a porté la décision
+drapeaux    aucuneNAppelle · grandeDecision · engagement
+            peurQuiCompte · peurQuiProtege
+classement  les options triées
+gagnant · dauphin · exaequo · ecart · intensite
+```
+
+`phrases.js` lit ces codes et rien d'autre : `VOIX.TETE[dominante]`,
+`VOIX.SERRE`, un fragment par drapeau. **Une seule table de correspondance,
+aucune cascade de `if` sur du texte.**
+
+### Ses trois bonus conditionnels
+
+| bonus | condition | valeur |
+|---|---|---|
+| `peurQuiCompte` | peur en Q1 ≥ 1 **et** regret en Q3 ≥ 2 | +1, ou +1,5 si l'enjeu est lourd |
+| `peurQuiProtege` | peur en Q1 ≥ 2 **et** Q3 ≤ 0 | −1 |
+| `engagement` | l'option porte une parole donnée | `SEUILS.engagement` |
+
+> C'est la même intuition que le `peur_excitation` de V2.5.1, mais **séparée en
+> deux cas opposés** : la peur qui signale un enjeu, et la peur qui protège
+> vraiment. V2.5.1 ne connaît que le premier.
+
+### Son échelle Q1 porte déjà deux dimensions
+
+```
+flemme   valence −2   peur 0
+bof      valence  0   peur 0
+peur     valence −1   peur 2
+trac     valence +1   peur 1
+partant  valence +1   peur 0
+elan     valence +2   peur 0
+```
+
+Deux axes dans une seule liste — exactement la séparation élan / peur /
+inertie décidée le 14/09, déjà implémentée ici.
+
+---
+
+# Noms déjà pris
+
+**253 identifiants** sont utilisés dans les cinq moteurs. Un nom de catégorie
+V4 qui reprendrait l'un d'eux créerait une collision.
+
+Les plus exposés, parce qu'ils sont courts et tentants :
+
+```
+type · total · score · gain · regret · sensation · dominante · enjeu
+verdict · options · analyses · tags · drapeaux · classement · ecart
+best · worst · gagnant · dauphin · exaequo · cheapest · bestGain
+peur · elan · flemme · bof · trac · partant · rien · vide
+leger · moyen · lourd · faible · serre · intensite · seuil
+oui · non · good · meh · bad · engagement · satisfaction
+```
+
+Et les 23 tags de V2.5.1, tous en minuscules avec tirets bas :
+
+```
+alerte_corporelle · apprentissage · connexion · creativite · culpabilite
+curiosite · energie_critique · energie_faible · energie_vs_valeur
+excitation · flemme_inertie · flemme_neutre · flemme_resistance · liberte
+obligation · peur_excitation · pression_sociale · procrastination
+regret_fort · relativisation · soulagement · soulagement_q3 · valeur_q0
+```
+
+> La liste complète est reproductible :
+> `node -e "…"` sur les quatre fichiers source — voir le commit qui a produit
+> cette section.
+
+## Conséquence pour la V4
+
+Trois conventions possibles, à trancher :
+
+1. **Préfixer** — `cat_regret_fort`, `cat_alerte_corporelle`. Sûr, un peu lourd.
+2. **Nommer en clair et long** — `regret_qui_domine`, `peur_qui_protege`.
+   Aucune collision avec les 253, parce qu'aucun identifiant existant n'est
+   une phrase.
+3. **Les sortir du code** — les catégories ne sont pas des variables mais des
+   clés de dictionnaire, dans un fichier à part. C'est ce que fait le QCM avec
+   `VOIX`, et rien ne peut alors entrer en collision.
+
+La troisième est celle que l'architecture du QCM rend naturelle.
+
+---
+
 # Tous les scénarios possibles
 
 Relevé exhaustif des quatre sources, **sans arbitrage**. Chaque ligne dit ce
