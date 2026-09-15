@@ -10,8 +10,8 @@ Rien n'est inventé ici : chaque mot vient d'une source, notée en fin de bloc.
 | marque | source |
 |---|---|
 | `2.5.1` | le lexique du moteur vivant, `src/oracle.js` |
-| `V3` | `oracle_version/oracle_V3-avorton.md`, tables RED/ORANGE/GREEN |
-| `V2` | `oracle_version/oracle_v2.md` |
+| `V3` | `oracle_versions/oracle_V3-avorton.md`, tables RED/ORANGE/GREEN |
+| `V2` | `oracle_versions/oracle_v2.md` |
 | `feux` | la section FEU VERT / FEU ROUGE de ce document |
 | `lexique` | LEXIQUE ÉMOTIONNEL DE DIANE, écrit à la main |
 | `vécu` | relevé dans les réponses réelles des sauvegardes |
@@ -20,8 +20,8 @@ Rien n'est inventé ici : chaque mot vient d'une source, notée en fin de bloc.
 
 # Idées de phrases, notées en passant
 
-Écrites de ta main dans la version précédente de ce document, gardées ici en
-attendant qu'elles rejoignent `oracle_phrases.md` :
+Apparues dans la version précédente de ce document, gardées ici en attendant
+qu'elles rejoignent `oracle_phrases.md` :
 
 - **fatigue ≠ flemme** — « ton corps est à plat mais ton cœur veut y être »
 - **les hameçons** — « "Il faut" n'est pas une envie, c'est un fantôme qui
@@ -388,4 +388,4 @@ désormais son niveau `medium` à lui. Avant, `peut-être`, `pas sûre` et
   dorment dans `oracle_cerveau.md` si tu veux en repêcher.
 - Les **phrases** de l'Oracle sont dans `oracle_phrases.md`.
 - Les **lexiques complets** version par version sont dans
-  `oracle_version/`.
+  `oracle_versions/`.

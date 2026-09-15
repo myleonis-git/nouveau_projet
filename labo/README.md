@@ -164,7 +164,7 @@ résultat, c'est une absence de mesure.
 ## Expérience 4 — V2 contre V2.5
 
 `v2_vs_v25.js` — reconstruction des deux moteurs depuis
-`documentation/oracle_version/`, exécutés sur les 25 dilemmes de
+`documentation/oracle_versions/`, exécutés sur les 25 dilemmes de
 `documentation/sauvegardes.md`, jugés au critère `OracleWasRight`.
 
 ```

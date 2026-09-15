@@ -1,5 +1,5 @@
 /**
- * V2 contre V2.5 — reconstruction des deux moteurs depuis documentation/oracle_version/,
+ * V2 contre V2.5 — reconstruction des deux moteurs depuis documentation/oracle_versions/,
  * exécutés sur les 25 dilemmes réels de documentation/sauvegardes.md.
  *
  * ⚠️ Reconstruction à partir des extraits documentés. Les fonctions de phrase
