@@ -47,6 +47,7 @@ Trois compteurs indépendants. `élan` et `désintérêt` se soustraient ;
 > euphor · joie · joyeu `2.5.1`
 > motivé · énergie · élan · chaud · partant · vivant · dynamique `feux`
 > ça me dit · envie grave · ça me ferait plaisir `lexique`
+> espoir · agir · vivre · exister · faire plaisir · doux · joli · gentil · généreux · tirer vers le haut · amusant · amusement · bonheur · heureux · euphorie · excité · enthousiaste · passion · passionné · impatient · vif · vitalité · vivace · vivacité · magique · magnifique · extraordinaire · brillant · drole · rigolo · humour · sourire · chaleur · gratitude · ardeur · impulsion · vivifier · vigueur · vigoureux `cerveau`
 
 **Modéré** — l'ouverture sans l'enthousiasme
 > why not · pourquoi pas · ça pourrait · ça peut · maybe · peut-être oui ·
@@ -54,6 +55,7 @@ Trois compteurs indépendants. `élan` et `désintérêt` se soustraient ;
 > intéressée · intriguée · intéressant · sympa · pas dégueu ·
 > ça me tenterait · tentée `2.5.1`
 > tester · voir · découvrir · tenter · essayer `feux`
+> décider · facile · idée · imaginer · explorer · improviser · spontané · spontanéité · jouer · profiter · divertir · loisir · attirer `cerveau`
 
 **Malgré l'obstacle** — l'élan qui passe en force
 > dur mais allez allez il faut y aller `V3`
@@ -67,6 +69,7 @@ Trois compteurs indépendants. `élan` et `désintérêt` se soustraient ;
 > flipper · inquiétude `feux`
 > gorge serrée · souffle court · mal au cœur · corps tendu · corps lourd ·
 > bloqué `lexique`
+> risquer · fragile · vulnérable · vulnérabilité · impossible · alarme · alerte · menace · dangereux · phobie · nerveux · trembler · vertige · pressentiment · frileux · frilosité · timide · timidité · trouillard · fuite · suffoquer · noyer · piège · catastrophe · horrible · tragique · désastre · choquant · faire peur · stressant · stressante · stressés · stressées · fiévreux · fébrilité `cerveau`
 
 **La règle** — la peur seule freine, la peur avec de l'élan devient un signal
 de valeur. C'est le `peur_excitation` du moteur, et la note ACT : *« peur +
@@ -90,6 +93,7 @@ envie = valeur, la peur est normale face au nouveau »*.
 > mmmmh · hm · hmm · pas convaincue · sceptique · pas terrible ·
 > pas ouf `2.5.1`
 > pff · pfffff `lexique`
+> boulot · occupé · compliqué · refuser · apathie · apathique · monotone · ennuyeux · lassé · marre · immobile · lourdeur · pesanteur · laisse tomber · tant pis · abandon · abattu · coincé · indifférent `cerveau`
 
 **Refus net**
 > pas envie · pas vraiment envie · pas trop envie · zéro envie `2.5.1`
@@ -107,10 +111,12 @@ dit la nature.
 > adore · à fond · complètement dedans · dans mon élément · trop bien ·
 > super bien · génial · incroyable · fantastique · heureuse · épanouie ·
 > vivante · énergisée · accomplie · réalisée · satisfaite `2.5.1`
+> satisfaction · réussite · succès · victoire · gagner · réussir `cerveau`
 
 **Récompense creuse** — l'option qui remplit le temps sans rien rapporter
 > passer le temps · tuer le temps · en attendant · pour m'occuper ·
 > histoire de · faute de mieux · rien d'autre à faire · par défaut `2.5.1`
+> seulement · minimal · superficiel · gratuit `cerveau`
 
 ---
 
@@ -127,6 +133,7 @@ Trois lectures superposées sur la même réponse.
 > frustration · déçue de moi · déçue · pas fière · pas contente de moi ·
 > regret · je regretterais · j'aurais regretté · j'aurais raté ·
 > j'aurais manqué `2.5.1`
+> putain · tomber · tirer vers le bas · souci · échec · perte · perdre · gâcher · deuil · malheur · peine · pleurer · mélancolie · déprimé · désespoir · tourment · écoeuré · furieux · énervé · irrité · agacé · râler · raler · injuste · injustice · tort · trahison · saboter `cerveau`
 
 **Modéré**
 > dommage · un peu dommage · c'est dommage · maybe deg · un peu deg ·
@@ -146,6 +153,7 @@ Trois lectures superposées sur la même réponse.
 > mieux sans · contente · heureuse · bien `2.5.1`
 > apaisé · calme · posé · ça passe · c'est fait · au moins c'est clair ·
 > j'ai dit ce que j'avais à dire · j'ai essayé · j'assume · j'avance `lexique`
+> guérir · confiance · confiant · apaisant · calmer · tranquilliser · tranquillité · serein · sérénité · paisible · réconfort · réconforter · rassurant · rassurer · rassuré · détendre · lâcher prise · soulager · équilibre · harmonie · harmonieux · zénitude · sécurité · confort · comfort `cerveau`
 
 **Léger** — ne pas pénaliser, c'est du bruit
 > un poil coupable · un peu coupable `2.5.1` `V3`
@@ -158,12 +166,14 @@ L'axe le plus discriminant du corpus : *« Q3 = je peux toujours le faire
 **Réversible — je peux toujours**
 > je peux toujours · au pire · pas grave · on verra · réversible `feux`
 > au pire c'est pas grave · pas la fin du monde `2.5.1`
+> oublier · oubliée · annuler · reculer · arrêter · quitter · partir · changer `cerveau`
 
 **Irréversible — l'occasion ratée**
 > rare · unique · jamais plus · chance unique · maintenant ou jamais ·
 > opportunit · occasion `2.5.1`
 > pas sûre s'il y a d'autres occasions `V3`
 > rarement · longtemps qu'on se rate `V3`
+> opportunité · urgence · urgent · immédiat · tout de suite · tard `cerveau`
 
 ## Répétition
 
@@ -173,6 +183,7 @@ Contredit un « ça ne comptera pas » : si ça revient, ça compte.
 > procrastin · ça traîne · encore traîner · traîne depuis `2.5.1`
 > depuis longtemps · en attente `V3`
 > rebelote `vécu`
+> tout le temps · systématiquement · fréquent · continu · courant · rituel `cerveau`
 
 ---
 
@@ -183,20 +194,25 @@ Bonus à plat — la valeur qualifie, elle ne pèse pas plus lourd d'elle-même.
 
 | Sous-catégorie | Vocabulaire | Source |
 |---|---|---|
-| **Créativité / expression** | créatif · créer · créativité · création · dessiner · peindre · imagin · moment créatif · artistique | `2.5.1` `V3` |
-| **Apprentissage / croissance** | appren · apprendre · appris · découv · découvert · progressé · évolué · compris · progresser · développement · débloquer · consolider | `2.5.1` `V3` |
-| **Connexion / intimité** | connexion · lien · rapprochement · complicité · ensemble · se rapprocher · rigoler ensemble · moment · potes · relationnel · amitié | `2.5.1` `V3` |
-| **Liberté / authenticité** | libre · liberté · autonome · indépendante · moi-même · vraiment moi · authentique · autonomie | `2.5.1` `V3` |
-| **Fierté / estime** | fière · fierté · mega fière · respect · digne · assumé · ok avec moi-même · accomplie · réalisée | `2.5.1` `feux` |
+| **Créativité / expression** | créatif · créer · créativité · création · dessiner · peindre · imagin · moment créatif · artistique · original · innovation · inspiration · exprimer · talent | `2.5.1` `V3` `cerveau` |
+| **Apprentissage / croissance** | appren · apprendre · appris · découv · découvert · progressé · évolué · compris · progresser · développement · débloquer · consolider · comprendre · connaissance · compétence · enseigner · enrichir · progrès · maîtriser · capable · dépasser · défi · surmonter · vaincre · construire · réaliser | `2.5.1` `V3` `cerveau` |
+| **Connexion / intimité** | connexion · lien · rapprochement · complicité · ensemble · se rapprocher · rigoler ensemble · moment · potes · relationnel · amitié · amour · copain · entouré · partager · appartenance · appartenir · équipe · sororité · membre · commun · connecter · reconnecter · toucher · entendre · parler | `2.5.1` `V3` `cerveau` |
+| **Liberté / authenticité** | libre · liberté · autonome · indépendante · moi-même · vraiment moi · authentique · autonomie · sincère · sincérité · honneteté · transparence · transparent · vérité · véritable · cohérence · cohérent · alignement · aligné · consentement · lâcher · libérer | `2.5.1` `V3` `cerveau` |
+| **Fierté / estime** | fière · fierté · mega fière · respect · digne · assumé · ok avec moi-même · accomplie · réalisée · courage · brave · mériter · assumer · valoir · valoir le coup | `2.5.1` `feux` `cerveau` |
 | **Plaisir** | kiff · plaisir · envie · fun · agréable · cool · bien · joyeux · léger · s'amuse de fou · kiffe | `feux` `2.5.1` |
 | **Curiosité** | curieux · curiosité · tester · voir · découvrir · tenter · essayer · intriguée | `feux` `2.5.1` |
-| **Repos réel** | me reposer vraiment · reprendre des forces · vrai repos · respirer · pause | `V3` |
-| **Aventure / nouveauté** | s'amuser · aventure · stimulant · actif · actrice · vivante · énergisée | `V3` `2.5.1` |
-| **Clarté** | clair · simple · évident · logique · fluide · naturel | `feux` |
-| **Projet / consolidation** | projet · consolider · situation · remotiver · avancer · debloquer | `V3` `2.5.1` |
+| **Repos réel** | me reposer vraiment · reprendre des forces · vrai repos · respirer · pause · sommeil · recharge · recharger · méditer · santé · souple · souplesse | `V3` `cerveau` |
+| **Aventure / nouveauté** | s'amuser · aventure · stimulant · actif · actrice · vivante · énergisée · surpris · étonné · stupéfait · neuf · inattendu · surprise · surprenant · surprendre · expérience · variété · voyage · voyager | `V3` `2.5.1` `cerveau` |
+| **Clarté** | clair · simple · évident · logique · fluide · naturel · évidence · lucide · précis · préciser · précision · simplicité · ordre · organiser · solution · éclaircir | `feux` `cerveau` |
+| **Projet / consolidation** | projet · consolider · situation · remotiver · avancer · debloquer · investir · préparer · commencer · démarrer · mener · gestion · stabilité · momentum · motivation | `V3` `2.5.1` `cerveau` |
+| **Activité physique** | bouger · courir · marche · marcher · physique · sport · nager · danser · balade · dehors | toi, 15/09 |
+| **Amitié** | amitié · potes · copain · copine · sororité · les filles · voir du monde · ensemble | toi, 15/09 |
 
-> `Clarté` et `Repos réel` sont nommées mais n'ont encore jamais été lues par
-> un moteur. `Aventure` non plus, sauf par ricochet.
+> **Amitié** est pour l'instant écrite à part *et* dans `Connexion / intimité`.
+> À trancher : une valeur à elle seule, ou une nuance de la connexion ?
+>
+> `Clarté`, `Repos réel` et `Activité physique` sont nommées mais n'ont encore
+> jamais été lues par un moteur. `Aventure` non plus, sauf par ricochet.
 
 ---
 
@@ -207,18 +223,18 @@ Malus.
 
 | Sous-catégorie | Vocabulaire | Source |
 |---|---|---|
-| **Obligation déguisée** | je devrais · il faut que · il faut · obligation · obligée · je dois · on attend de moi · c'est mon rôle · sinon · si je fais pas · j'ai dit que · j'ai promis · j'avais dit · c'est la chose logique · logique de · normal de · me trahir | `2.5.1` `V3` |
-| **Injonctions sociales** | tout le monde · tout le monde y va · sois raisonnable · anormal · bizarre de | `2.5.1` + prose ci-dessous |
-| **Culpabilité** | coupable · culpabilité · culpab · honte · honteuse · mauvaise conscience · remords · j'aurais dû · aurais dû faire · je m'en veux | `2.5.1` `lexique` |
-| **Pression sociale / regard** | gênée · gêne · mal à l'aise · awkward · bizarre · chelou · ils vont · ils vont penser · vont penser · je les reverrai · je les verrai · on se voit · jugement · jugée · mal vue · décevoir · vexer · blesser | `2.5.1` |
-| **Procrastination** | procrastin · ça traîne · encore traîner · traîne depuis · depuis longtemps · en attente | `2.5.1` `V3` |
+| **Obligation déguisée** | je devrais · il faut que · il faut · obligation · obligée · je dois · on attend de moi · c'est mon rôle · sinon · si je fais pas · j'ai dit que · j'ai promis · j'avais dit · c'est la chose logique · logique de · normal de · me trahir · devoir · exiger · forcer · discipline · rigueur · rigide · rigidité · morale · nécessaire · nécessité · indispensable · essentiel · crucial | `2.5.1` `V3` `cerveau` |
+| **Injonctions sociales** | tout le monde · tout le monde y va · sois raisonnable · anormal · bizarre de · correct · sérieusement · opinion · image · juger · critique | `2.5.1` + prose ci-dessous `cerveau` |
+| **Culpabilité** | coupable · culpabilité · culpab · honte · honteuse · mauvaise conscience · remords · j'aurais dû · aurais dû faire · je m'en veux · excuse · bourreau | `2.5.1` `lexique` `cerveau` |
+| **Pression sociale / regard** | gênée · gêne · mal à l'aise · awkward · bizarre · chelou · ils vont · ils vont penser · vont penser · je les reverrai · je les verrai · on se voit · jugement · jugée · mal vue · décevoir · vexer · blesser · mépriser · exposer · montrer · regarder · visible | `2.5.1` `cerveau` |
+| **Procrastination** | procrastin · ça traîne · encore traîner · traîne depuis · depuis longtemps · en attente · procrastiner · patience · patienter · remobiliser | `2.5.1` `V3` `cerveau` |
 | **Dépendance à un tiers** | elle va · mon conseiller · mon boss · attendre qu'ils répondent | `V3` `vécu` |
-| **Auto-jugement** | ridicule · faible · bête · naïve · pathétique · pas malin · pas digne · pas fière · j'abuse · j'exagère · je me respecte pas | `lexique` |
+| **Auto-jugement** | ridicule · faible · bête · naïve · pathétique · pas malin · pas digne · pas fière · j'abuse · j'exagère · je me respecte pas · perfection · parfait · stupide · lâcheté · vanité · orgueil · prétentieux · prétention · hypocrite · hypocrisie · faire semblant · prétendre · imitation · illusion · mentir · tromper · manipuler | `lexique` `cerveau` |
 | **Rationalisation** | maybe si… · ça pourrait… · peut-être oui si… · risque que… · au quotidien | `lexique` |
-| **Ambivalence** | oui mais non · both / neither · ça dépend · d'un côté… de l'autre… | `lexique` |
-| **Peur de l'inaction** | peur de couler · inactive · rien faire · peur d'être inactive | `V3` |
-| **Manque / dépendance** | besoin · manque · vide · dépendance · accro · attaché | `feux` |
-| **Malaise** | mal à l'aise · gênant · chelou · bizarre · froid · lourd · oppressant · étouffant | `feux` `lexique` |
+| **Ambivalence** | oui mais non · both / neither · ça dépend · d'un côté… de l'autre… · ambigu · ambiguïté · ambivalent · incohérent · incongruence · discordance · discordant · désaccord · déséquilibre · instable | `lexique` `cerveau` |
+| **Peur de l'inaction** | peur de couler · inactive · rien faire · peur d'être inactive · inutile · insuffisant | `V3` `cerveau` |
+| **Manque / dépendance** | besoin · manque · vide · dépendance · accro · attaché · solitude · isoler · désir · avide · obsession | `feux` `cerveau` |
+| **Malaise** | mal à l'aise · gênant · chelou · bizarre · froid · lourd · oppressant · étouffant · malade · tension · perturbé · chaos · désordre · turbulence · turbulent · bousculé · piquer · blessé · briser · casser · détruire · destruction · violence · violent · toxique · sadique · agressif · haine · révolté · révolter | `feux` `lexique` `cerveau` |
 
 ## Ceux que tu as nommés en prose, sans vocabulaire encore
 
@@ -244,9 +260,9 @@ Ils modifient le poids, ils ne décident jamais seuls.
 
 | | Vocabulaire | Source |
 |---|---|---|
-| **Intensité** | très · trop · à fond · énormément · grave · méga · mega · carrément | `feux` `2.5.1` |
+| **Intensité** | très · trop · à fond · énormément · grave · méga · mega · carrément · vite · vitesse · rapide · rapidité · tout à fait · intense · profond · profondeur · vaste · grand · gravité · franchement · vivement | `feux` `2.5.1` `cerveau` |
 | **Répétition** | encore · toujours · à chaque fois · souvent · rebelote | `feux` `vécu` |
-| **Projection** | j'imagine · je me vois · si jamais · et après | `feux` |
+| **Projection** | j'imagine · je me vois · si jamais · et après · prédire · rêve · rêver · vision · impression · intuition · instinct · anticiper | `feux` `cerveau` |
 
 ## Diviseurs
 
@@ -254,14 +270,14 @@ Ils modifient le poids, ils ne décident jamais seuls.
 |---|---|---|
 | **Réversibilité** | au pire · pas grave · on verra · réversible · je peux toujours | `feux` `2.5.1` |
 | **Relativisation** | au pire c'est pas grave · pas la fin du monde · osef · je m'en fous · bah · c'est juste · c'est rien · c'est pas grave · j'aurais oublié · ça compte pas vraiment | `2.5.1` |
-| **Distance** | un peu · moyen · bof · pas tant que ça | `feux` |
+| **Distance** | un peu · moyen · bof · pas tant que ça · vague · légereté · zeste | `feux` `cerveau` |
 
 ## Neutraliseurs
 
 | | Vocabulaire | Source |
 |---|---|---|
-| **Confusion** | je sais pas · flou · confus · perdu · j'en sais rien | `feux` `2.5.1` |
-| **État limite** | à bout · trop mal · au fond du trou | `feux` |
+| **Confusion** | je sais pas · flou · confus · perdu · j'en sais rien · incertain · indécis · doute · obscur · obscurité · question · questionner · hésiter | `feux` `2.5.1` `cerveau` |
+| **État limite** | à bout · trop mal · au fond du trou · vidée · survivre · tanker | `feux` `cerveau` |
 | **Exclusions** | un poil · un peu — annulent certains motifs au lieu de les pondérer | `V3` `2.5.1` |
 
 ---
@@ -323,19 +339,39 @@ faire un truc. Si « demain sans » = regret fort, l'envie dépasse la fatigue.
 
 ---
 
-# La faille connue de Q0
+# La faille de Q0, et sa solution
 
-Faire une sortie avec mes amies, je ne dirais pas forcément « dans 10 jours ça
-compte » — pourtant ça peut créer un souvenir pour toujours. Pareil pour mon
-hygiène : dans 10 jours ça ne compte pas forcément, et en même temps c'est
-important.
+**La faille.** Faire une sortie avec mes amies, je ne dirais pas forcément
+« dans 10 jours ça compte » — pourtant ça peut créer un souvenir pour
+toujours. Pareil pour mon hygiène : dans 10 jours ça ne compte pas forcément,
+et en même temps c'est important.
+
+**La solution retenue le 15/09 : un troisième bouton, Peut-être.** Le binaire
+forçait ces cas-là vers « non », et « non » déclenche le verrou pile ou face.
+Avec trois portes, l'hésitation cesse d'être une négation.
+
+C'est fait des deux côtés — le bouton existe dans l'app, et le moteur a
+désormais son niveau `medium` à lui. Avant, `peut-être`, `pas sûre` et
+`ça dépend` vivaient dans la liste *important* : hésiter revenait à répondre
+« oui, carrément ».
+
+| réponse | portée | effet |
+|---|---|---|
+| Oui | `high` | ouvre les branches réservées aux vrais enjeux |
+| Peut-être | `medium` | laisse le texte décider |
+| Non | `low` | verrou : pile ou face |
 
 ---
 
 # Ailleurs
 
-- La **liste brute de vocabulaire** (861 entrées, non triées) est restée dans
+- La **liste brute de vocabulaire** (861 entrées) est restée dans
   `oracle_cerveau.md`, sous `# vocabulaire`. Rien n'en a été supprimé.
+  Sur ces 861 : 215 étaient déjà placées ici, 407 viennent d'y être rangées,
+  et **239 sont restées de côté** — soit trop soutenues pour que tu les
+  écrives un jour (*abraser, béatitude, véhémentement, transcender*), soit
+  hors sujet (*nominalisé, systémique, économie, village, zoomer*). Elles
+  dorment dans `oracle_cerveau.md` si tu veux en repêcher.
 - Les **phrases** de l'Oracle sont dans `oracle_phrases.md`.
 - Les **lexiques complets** version par version sont dans
   `oracle_version/`.
